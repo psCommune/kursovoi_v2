@@ -181,7 +181,7 @@ class MainActivity : AppCompatActivity() {
         val cursor = this.contentResolver.query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection,selection,null,
         sortingList[sortOrder], null)
         if(cursor != null){
-            if(cursor.moveToFirst())
+            if (cursor.moveToFirst())
                 do {
                     val titleC = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.TITLE))?:"Unknown"
                     val idC = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media._ID))?:"Unknown"
@@ -198,7 +198,7 @@ class MainActivity : AppCompatActivity() {
                     if(file.exists())
                         tempList.add(music)
                 }while (cursor.moveToNext())
-                cursor.close()
+            cursor.close()
         }
         return tempList
     }

@@ -202,6 +202,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             .apply(RequestOptions().placeholder(R.drawable.app_icon).centerCrop())
             .into(binding.songImgPA)
         binding.songNamePA.text = musicListPA[songPosition].title
+        binding.songAuthorPA.text = musicListPA[songPosition].artist
         if(repeat) binding.repeatBtnPA.setColorFilter(ContextCompat.getColor(applicationContext, R.color.purple_500))
         if(min15 || min30 || min60) binding.timerBtnPA.setColorFilter(ContextCompat.getColor(applicationContext, R.color.purple_500))
         if(isFavourite) binding.favouriteBtnPA.setImageResource(R.drawable.favourite_icon)

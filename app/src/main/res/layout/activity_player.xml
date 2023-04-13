@@ -76,6 +76,19 @@
         android:layout_weight="1"
         android:textIsSelectable="true" />
 
+<!--    Current Song Name-->
+    <TextView
+        android:id="@+id/songAuthorPA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/song_name"
+        android:textSize="18sp"
+        android:textColor="?colorOnPrimary"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textIsSelectable="true" />
+
 <!--    Seekbar & TextViews for it-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -134,11 +147,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="72dp"
-            android:backgroundTint="@android:color/holo_red_light"
             android:contentDescription="@string/big_player_playsong_button"
             app:icon="@drawable/pause_icon"
             app:iconSize="48dp"
-            app:iconTint="@color/white"
             app:shapeAppearanceOverlay="@style/curved" />
 
 <!--        Next Button-->
