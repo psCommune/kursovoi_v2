@@ -8,7 +8,6 @@
     android:orientation="vertical"
     android:gravity="center">
 
-<!--    First Row-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +15,6 @@
         android:gravity="center"
         android:layout_weight="1">
 
-<!--    Back Button-->
         <ImageButton
             android:id="@+id/backBtnPA"
             android:layout_width="50dp"
@@ -39,7 +37,6 @@
             tools:ignore="NestedWeights"
             android:textStyle="bold"/>
 
-<!--        Favourite Button-->
         <ImageButton
             android:id="@+id/favouriteBtnPA"
             android:layout_width="50dp"
@@ -51,7 +48,6 @@
             app:tint="@android:color/holo_red_dark" />
     </LinearLayout>
 
-<!--    Current Song Image-->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/songImgPA"
         android:layout_width="250dp"
@@ -63,7 +59,6 @@
         app:strokeColor="@color/cool_blue"
         app:strokeWidth="1dp"/>
 
-<!--    Current Song Name-->
     <TextView
         android:id="@+id/songNamePA"
         android:layout_width="match_parent"
@@ -76,7 +71,6 @@
         android:layout_weight="1"
         android:textIsSelectable="true" />
 
-<!--    Current Song Name-->
     <TextView
         android:id="@+id/songAuthorPA"
         android:layout_width="match_parent"
@@ -89,7 +83,6 @@
         android:layout_weight="1"
         android:textIsSelectable="true" />
 
-<!--    Seekbar & TextViews for it-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
@@ -123,7 +116,6 @@
             android:gravity="center"/>
     </LinearLayout>
 
-<!--    Floating Buttons for Previous, Pause & Next-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -131,7 +123,6 @@
          android:gravity="center"
         android:layout_weight="1">
 
-<!--        Previous Button-->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/previousBtnPA"
             android:layout_width="wrap_content"
@@ -141,7 +132,6 @@
             app:iconSize="48dp"
             app:shapeAppearanceOverlay="@style/curved" />
 
-<!--        Play & Pause Button-->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/playPauseBtnPA"
             android:layout_width="wrap_content"
@@ -152,7 +142,6 @@
             app:iconSize="48dp"
             app:shapeAppearanceOverlay="@style/curved" />
 
-<!--        Next Button-->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/nextBtnPA"
             android:layout_width="wrap_content"
@@ -164,14 +153,12 @@
 
     </LinearLayout>
 
-<!--    Last Row for Various Player Options-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_weight="1">
 
-<!--        Repeat Button-->
         <ImageButton
             android:id="@+id/repeatBtnPA"
             android:layout_width="0dp"
@@ -183,7 +170,6 @@
             tools:ignore="NestedWeights"
             app:tint="@color/cool_pink"/>
 
-<!--        Equalizer Button-->
         <ImageButton
             android:id="@+id/equalizerBtnPA"
             android:layout_width="0dp"
@@ -194,7 +180,6 @@
             android:layout_weight="1"
             app:tint="@color/cool_pink" />
 
-<!--        Timer Button-->
         <ImageButton
             android:id="@+id/timerBtnPA"
             android:layout_width="0dp"
@@ -205,7 +190,6 @@
             android:layout_weight="1"
             app:tint="@color/cool_pink" />
 
-<!--       Volume Button-->
         <ImageButton
             android:id="@+id/boosterBtnPA"
             android:layout_width="0dp"

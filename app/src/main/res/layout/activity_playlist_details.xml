@@ -98,7 +98,6 @@
         android:visibility="invisible"/>
 
 
-        <!--for buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -106,7 +105,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        <!--Add Button-->
         <Button
             android:id="@+id/addBtnPD"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -120,7 +118,6 @@
             android:textColor="?colorOnPrimary"
             tools:ignore="RtlHardcoded" />
 
-        <!--Remove Button-->
         <Button
             android:id="@+id/removeAllPD"
             style="@style/Widget.AppCompat.Button.Borderless"

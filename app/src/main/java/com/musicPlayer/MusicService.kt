@@ -159,7 +159,6 @@ class MusicService: Service(), AudioManager.OnAudioFocusChangeListener {
             PlayerActivity.isPlaying = false
             mediaPlayer!!.pause()
             showNotification(R.drawable.play_icon)
-
         }
     }
 
