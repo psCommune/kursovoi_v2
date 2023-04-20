@@ -95,11 +95,13 @@ class MainActivity : AppCompatActivity() {
         binding.playNextBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, PlayNext::class.java))
         }
+
         binding.navView.setNavigationItemSelectedListener{
             when(it.itemId)
             {
                 R.id.navSettings -> startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
                 R.id.navAbout -> startActivity(Intent(this@MainActivity, AboutActivity::class.java))
+                R.id.navAPI -> startActivity(Intent(this@MainActivity, ytmApi::class.java))
                 R.id.navExit -> {
                     val builder = MaterialAlertDialogBuilder(this)
                     builder.setTitle("Exit")

@@ -50,12 +50,16 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
     //Notification
     implementation 'androidx.media:media:1.6.0'
-    //storing objects in shared preferences
+    //storing objects
     implementation 'com.google.code.gson:gson:2.10'
     //storing objects in bd
     //implementation 'androidx.room:room-ktx:2.5.1'
     //implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     //kapt 'androidx.room:room-compiler:2.5.1'
+
     //circular seekbar --> volume controls
     implementation 'com.github.lukelorusso:VerticalSeekBar:1.2.7'
+    //YouTube api
+    //implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //implementation 'com.google.api-client:google-api-client:1.32.1'
 }

@@ -130,7 +130,7 @@
             android:contentDescription="@string/big_player_backsong_button"
             app:icon="@drawable/previous_icon"
             app:iconSize="48dp"
-            app:shapeAppearanceOverlay="@style/curved" />
+            app:shapeAppearanceOverlay="@style/curved"/>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/playPauseBtnPA"

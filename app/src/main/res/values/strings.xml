@@ -44,4 +44,5 @@
     <string name="big_player_nextsong_button">next song</string>
     <string name="big_player_backsong_button">back song</string>
     <string name="big_player_playsong_button">play song</string>
+    <string name="api">API</string>
 </resources>
