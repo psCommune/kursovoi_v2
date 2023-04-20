@@ -90,8 +90,6 @@ class MusicService: Service(), AudioManager.OnAudioFocusChangeListener {
             mediaSession.setPlaybackState(playBackState)
             mediaSession.setCallback(object: MediaSessionCompat.Callback(){
 
-                //called when headphones buttons are pressed
-                //currently only pause or play music on button click
                 override fun onMediaButtonEvent(mediaButtonEvent: Intent?): Boolean {
                     if(PlayerActivity.isPlaying){
                         //pause music
