@@ -29,7 +29,7 @@
     <string name="playlist_name">Playlist Name</string>
     <string name="playlist_delete">Delete</string>
     <string name="user_name">Name playlist creator</string>
-    <string name="add_song_queue">Add to queue</string>
+    <string name="add_song_queue">Add sound</string>
     <string name="remove_all">Remove All</string>
     <string name="search_song">Search Song</string>
     <string name="set_theme">Set Theme</string>

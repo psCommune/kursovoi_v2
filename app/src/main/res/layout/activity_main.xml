@@ -13,70 +13,21 @@
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@id/nowPlaying"
+                app:layout_constraintBottom_toTopOf="@id/navigationPanel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <Button
-                        android:id="@+id/shuffleBtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/shuffle_btn"
-                        android:drawableTop="@drawable/shuffle_icon"
-                        android:text="@string/shuffle_btn"
-                        android:textAllCaps="false"
-                        android:textColor="?colorOnPrimary" />
-                    <Button
-                        android:id="@+id/favouriteBtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/favourites_btn"
-                        android:drawableTop="@drawable/favourite_icon"
-                        android:text="@string/favourites_btn"
-                        android:textAllCaps="false"
-                        android:textColor="?colorOnPrimary" />
-                    <Button
-                        android:id="@+id/playlistBtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/playlist_btn"
-                        android:drawableTop="@drawable/playlist_icon"
-                        android:text="@string/playlist_btn"
-                        android:textAllCaps="false"
-                        android:textColor="?colorOnPrimary" />
-
-                    <Button
-                        android:id="@+id/playNextBtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/playlist_btn"
-                        android:drawableTop="@drawable/play_next_icon"
-                        android:text="@string/play_next"
-                        android:textAllCaps="false"
-                        android:textColor="?colorOnPrimary" />
-
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/totalSongs"
@@ -93,16 +44,76 @@
                     android:scrollbars="vertical" />
 
             </LinearLayout>
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/nowPlaying"
+
+            <LinearLayout
+                android:id="@+id/navigationPanel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/shuffleBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/shuffle_btn"
+                    android:drawableTop="@drawable/shuffle_icon"
+                    android:text="@string/shuffle_btn"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnPrimary" />
+
+                <Button
+                    android:id="@+id/favouriteBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/favourites_btn"
+                    android:drawableTop="@drawable/favourite_icon"
+                    android:text="@string/favourites_btn"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnPrimary" />
+
+                <Button
+                    android:id="@+id/playlistBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/playlist_btn"
+                    android:drawableTop="@drawable/playlist_icon"
+                    android:text="@string/playlist_btn"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnPrimary" />
+
+                <Button
+                    android:id="@+id/playNextBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/playlist_btn"
+                    android:drawableTop="@drawable/play_next_icon"
+                    android:text="@string/play_next"
+                    android:textAllCaps="false"
+                    android:textColor="?colorOnPrimary" />
+
+            </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nowPlaying"
                 android:name="com.musicPlayer.NowPlaying"
-                tools:layout="@layout/fragment_now_playing"
-                android:visibility="gone"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout="@layout/fragment_now_playing" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

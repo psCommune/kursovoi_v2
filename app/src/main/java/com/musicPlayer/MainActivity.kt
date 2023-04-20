@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //checking for dark theme
         if(themeIndex == 4 &&  resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_NO)
-            Toast.makeText(this, "Black Theme Works Best in Dark Mode!!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Black Theme ", Toast.LENGTH_LONG).show()
 
         if(requestRuntimePermission()){
             initializeLayout()
