@@ -2,6 +2,9 @@ package com.musicPlayer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ListView
+import androidx.core.view.isVisible
 import com.musicPlayer.databinding.ActivityYtmApiBinding
 import org.json.JSONObject
 import java.io.IOException
@@ -28,9 +31,8 @@ class ytmApi : AppCompatActivity() {
         val objectInfo =  executorService.submit(Callable {
             httpsRequest("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLUsWL6PZZ1um2KOVqe7bcNEk-Txn5ACNt&key=AIzaSyCKLUO5xpWeCgdXa_lwWuSVBgq0MYkvQPc&fields=items(snippet(title,position,videoOwnerChannelTitle))")
         }).get()
-
-        binding.apiText.text = objectInfo.title
     }
+
 
     @Throws(IOException::class)
     fun httpsRequest(urlString: String): ApiInfo {
@@ -43,13 +45,34 @@ class ytmApi : AppCompatActivity() {
             str += data.toChar()
             data = connection.inputStream.read()
         }
-        val mainObject = JSONObject(str)
+        var jsonResponse = JSONObject(str)
+        var jsonArray = jsonResponse.getJSONArray("items");
+        var audioInfo = jsonArray.getJSONObject(0)
         val item = ApiInfo(
-            mainObject.getString("title"),
-            mainObject.getString("position"),
-            mainObject.getString("videoOwnerChannelTitle")
+            audioInfo.getString("title"),
+            audioInfo.getString("position"),
+            audioInfo.getString("videoOwnerChannelTitle")
         )
         return item
     }
 
+//    @Throws(IOException::class)
+//    fun httpsRequest(urlString: String): ApiInfo {
+//        val url = URL(urlString)
+//        val connection = url.openConnection() as HttpsURLConnection
+//        connection.requestMethod = "GET"
+//        var data: Int = connection.inputStream.read()
+//        var str = ""
+//        while (data != -1) {
+//            str += data.toChar()
+//            data = connection.inputStream.read()
+//        }
+//        val mainObject = JSONObject(str)
+//        val item = ApiInfo(
+//            mainObject.getString("title"),
+//            mainObject.getString("position"),
+//            mainObject.getString("videoOwnerChannelTitle")
+//        )
+//        return item
+//    }
 }
