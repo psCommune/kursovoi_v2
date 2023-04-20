@@ -15,7 +15,7 @@ class ytmApi : AppCompatActivity() {
     private lateinit var binding: ActivityYtmApiBinding
 
     companion object {
-        val PLAYLIST_ID: String = "PLUsWL6PZZ1uklUFkzKxUbxJG2otXfML5B"
+        val PLAYLIST_ID: String = "PLUsWL6PZZ1um2KOVqe7bcNEk-Txn5ACNt"
         val YOUTUBE_API_KEY: String = "AIzaSyCKLUO5xpWeCgdXa_lwWuSVBgq0MYkvQPc"
     }
 
@@ -26,7 +26,7 @@ class ytmApi : AppCompatActivity() {
 
         val executorService: ExecutorService = Executors.newSingleThreadExecutor()
         val objectInfo =  executorService.submit(Callable {
-            httpsRequest("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLUsWL6PZZ1uklUFkzKxUbxJG2otXfML5B&key=AIzaSyCKLUO5xpWeCgdXa_lwWuSVBgq0MYkvQPc&fields=items(id,snippet(title,position,videoOwnerChannelTitle))")
+            httpsRequest("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLUsWL6PZZ1um2KOVqe7bcNEk-Txn5ACNt&key=AIzaSyCKLUO5xpWeCgdXa_lwWuSVBgq0MYkvQPc&fields=items(snippet(title,position,videoOwnerChannelTitle))")
         }).get()
 
         binding.apiText.text = objectInfo.title
@@ -45,7 +45,6 @@ class ytmApi : AppCompatActivity() {
         }
         val mainObject = JSONObject(str)
         val item = ApiInfo(
-            mainObject.getString("id"),
             mainObject.getString("title"),
             mainObject.getString("position"),
             mainObject.getString("videoOwnerChannelTitle")
