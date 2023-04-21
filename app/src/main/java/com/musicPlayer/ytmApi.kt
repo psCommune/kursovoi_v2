@@ -46,6 +46,7 @@ class ytmApi : AppCompatActivity() {
 //    private fun updateInfo(){
 //        model.liveDataCurrent.observe(viewLifecycleOwner){
 //            binding.testInfo.text = it.title
+//            Picasso.get().load(it.imageUrl).into //library for download arts
 //        }
 //    }
 
