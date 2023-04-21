@@ -1,6 +1,6 @@
 package com.musicPlayer
 
-data class ApiInfo(
+data class ApiSongModel(
     val title: String,
     val position: String,
     val videoOwnerChannelTitle: String
